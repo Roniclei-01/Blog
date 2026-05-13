@@ -5,4 +5,4 @@ Disallow: /admin/
 Disallow: /admin
 Disallow: /cadastrar_admin.php
 
-Sitemap: Sitemap: https://codexa.liveblog365.com/sitemap.php
+Sitemap: Sitemap: https://seu_blog/sitemap.php
