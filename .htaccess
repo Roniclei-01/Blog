@@ -1,0 +1,20 @@
+Options -Indexes
+DirectoryIndex index.php index.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [NC,L]
+
+Header unset X-Powered-By
+Header always unset X-Powered-By
+
+<FilesMatch "\.(sql|log|env|htpasswd|bak|sh)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
